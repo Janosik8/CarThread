@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="1009.0" prefWidth="1391.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.symulator2_javafx.HelloController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="625.0" prefWidth="934.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox cacheShape="false" centerShape="false" layoutX="14.0" layoutY="26.0" pickOnBounds="false" prefHeight="400.0" prefWidth="165.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TitledPane prefHeight="219.0" prefWidth="165.0" text="Samochód">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="163.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="25.0" text="Model" />
+                              <TextField fx:id="modelSamochoduField" editable="false" layoutX="51.0" layoutY="21.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="58.0" text="Nr.Rej" />
+                              <TextField fx:id="nrRejSamochoduField" editable="false" layoutX="51.0" layoutY="54.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="94.0" text="Waga" />
+                              <TextField fx:id="wagaSamochoduField" editable="false" layoutX="51.0" layoutY="90.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="128.0" text="Prędkość" />
+                              <TextField fx:id="maxPredkoscSamochoduField" editable="false" layoutX="70.0" layoutY="124.0" prefHeight="26.0" prefWidth="89.0" />
+                              <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#onWlaczSilnik" text="Włącz" />
+                              <Button layoutX="97.0" layoutY="160.0" mnemonicParsing="false" onAction="#onWylaczSilnik" text="Wyłącz" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </TitledPane>
+                  <TitledPane animated="false" prefHeight="227.0" prefWidth="165.0" text="Skrzynia biegów">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="256.0" prefWidth="163.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="25.0" text="Nazwa" />
+                              <TextField fx:id="nazwaSkrzyniField" editable="false" layoutX="51.0" layoutY="21.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="58.0" text="Cena" />
+                              <TextField fx:id="cenaSkrzyniField" editable="false" layoutX="51.0" layoutY="54.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="94.0" text="Waga" />
+                              <TextField fx:id="wagaSkrzyniField" editable="false" layoutX="51.0" layoutY="90.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="128.0" text="Bieg" />
+                              <TextField fx:id="aktualnyBiegSkrzyniField" editable="false" layoutX="70.0" layoutY="124.0" prefHeight="26.0" prefWidth="89.0" />
+                              <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#onBiegPlus" text="Bieg+" />
+                              <Button layoutX="97.0" layoutY="160.0" mnemonicParsing="false" onAction="#onBiegMinus" prefHeight="26.0" prefWidth="58.0" text="Bieg-" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane prefHeight="219.0" prefWidth="165.0" text="Silnik">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="163.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="25.0" text="Nazwa" />
+                              <TextField fx:id="nazwaSilnikaField" editable="false" layoutX="51.0" layoutY="21.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="58.0" text="Cena" />
+                              <TextField fx:id="cenaSilnikaField" editable="false" layoutX="51.0" layoutY="54.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="94.0" text="Waga" />
+                              <TextField fx:id="wagaSilnikaField" editable="false" layoutX="51.0" layoutY="90.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="128.0" text="Obroty" />
+                              <TextField fx:id="maxObrotySilnikaField" editable="false" layoutX="70.0" layoutY="124.0" prefHeight="26.0" prefWidth="89.0" />
+                              <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#onDodajGazu" text="Gaz+" />
+                              <Button layoutX="97.0" layoutY="160.0" mnemonicParsing="false" onAction="#onOdejmijGazu" prefHeight="26.0" prefWidth="61.0" text="Gaz-" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </TitledPane>
+                  <TitledPane prefHeight="219.0" prefWidth="165.0" text="Sprzęgło">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="163.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="25.0" text="Nazwa" />
+                              <TextField fx:id="nazwaSprzeglaField" editable="false" layoutX="51.0" layoutY="21.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="58.0" text="Cena" />
+                              <TextField fx:id="cenaSprzeglaField" editable="false" layoutX="51.0" layoutY="54.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="94.0" text="Waga" />
+                              <TextField fx:id="wagaSprzeglaField" editable="false" layoutX="51.0" layoutY="90.0" prefHeight="26.0" prefWidth="108.0" />
+                              <Label layoutX="14.0" layoutY="128.0" text="Stan" />
+                              <TextField fx:id="stanSprzeglaField" editable="false" layoutX="70.0" layoutY="124.0" prefHeight="26.0" prefWidth="89.0" />
+                              <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#onNacisnijSprzeglo" text="Naciśnij" />
+                              <Button layoutX="97.0" layoutY="160.0" mnemonicParsing="false" onAction="#onZwolnijSprzeglo" prefHeight="26.0" prefWidth="61.0" text="Zwolnij" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </TitledPane>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="164.0" layoutY="57.0" prefHeight="1009.0" prefWidth="1227.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="310.0" layoutY="15.0" text="Samochód" />
+                  <Button layoutX="617.0" layoutY="16.0" mnemonicParsing="false" onAction="#onDodajAuto" text="Dodaj nowy" />
+                  <Button layoutX="732.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUsun" text="usuń" />
+                  <Label layoutX="16.0" layoutY="77.0" text="Mapa" />
+                  <ComboBox fx:id="carComboBox" layoutX="394.0" layoutY="11.0" onAction="#handleCarSelection" prefWidth="150.0" promptText="Cars" />
+                  <BorderPane fx:id="mapa" layoutY="110.0" prefHeight="899.0" prefWidth="1227.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+                        <ImageView fx:id="imageField" fitHeight="43.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                        </ImageView>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
